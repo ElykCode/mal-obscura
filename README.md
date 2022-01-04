@@ -1,14 +1,14 @@
-#Mal-Obscura
+# Mal-Obscura
 
-##A malware obfuscation conceptual demonstration
+## A malware obfuscation conceptual demonstration
 
-###Gist
+### Gist
 
 This is a very high level, conceptual look at hiding malware from signature-based AV software. This probably wouldn't actually work in real life, but it's a nice look at the rough concept.
 
 This demonstration has a "signature-based AV client", a "malicious" script (it's not actually malicious), a good script, and obfuscation programs (an encoder and decoder).
 
-###Operation of the demo
+### Operation of the demo
 
 1) Run `bash av.sh goodscript.sh` and `bash av.sh badscript.sh`. The good script should pass the check, and the bad script should fail it.
 
@@ -16,7 +16,7 @@ This demonstration has a "signature-based AV client", a "malicious" script (it's
 
 3) Run `bash malob-exec.sh script.encoded`. This will run the "malicious" script, which tells you that it ran and compromised your system (it doesn't actually do anything beside print that message).
 
-###How it works
+### How it works
 
 To simulate a signature-based AV, the "AV client" hashes the given script and compares it to the known hash of the bad script. It then tells you if it matched.
 
