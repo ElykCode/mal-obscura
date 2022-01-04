@@ -8,6 +8,11 @@ This is a very high level, conceptual look at hiding malware from signature-base
 
 This demonstration has a "signature-based AV client", a "malicious" script (it's not actually malicious), a good script, and obfuscation programs (an encoder and decoder).
 
+### Warnings
+
+* There is no error checking on the scripts. I may add some at a later point, but this wasn't originally designed to be shared as a demo (so no fancy scripting).
+* `badscript.sh` is not actually malicious, but it *will* make puppy-dog-eyes at you until you run it (so be glad it's not malicious).
+
 ### Operation of the demo
 
 1) Run `bash av.sh goodscript.sh` and `bash av.sh badscript.sh`. The good script should pass the check, and the bad script should fail it.
